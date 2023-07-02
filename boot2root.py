@@ -1,6 +1,9 @@
 import os
 import requests
 import subprocess
+import motd
+
+motd.display_random_hacker_quote()
 
 def get_sudo_permissions():
     try:
