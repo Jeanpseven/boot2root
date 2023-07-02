@@ -14,18 +14,16 @@ def display_random_hacker_quote():
         ("Descubra os segredos ocultos, ganhe o controle absoluto.", "Autor Desconhecido"),
         ("No mundo dos hackers, o controle é a chave para a vitória.", "Autor Desconhecido")
     ]
-    
     # Exibe uma frase aleatória relacionada a controle e boot2root
     random_index = random.randint(0, len(control_quotes) - 1)
     quote, author = control_quotes[random_index]
     print(quote)
     print("- ", author)
-
 # Exibe o MOTD
-print("==== Bem-vindo ====")
-print("Controle é poder. Prepare-se para dominar!")
-print("====================")
-print()
+    print("==== Bem-vindo ====")
+    print("Controle é poder. Prepare-se para dominar!")
+    print("====================")
+    print()
 
 # Chama a função para exibir uma frase aleatória de hackers relacionada a controle e boot2root
 display_random_hacker_quote()
