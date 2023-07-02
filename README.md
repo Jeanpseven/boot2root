@@ -15,3 +15,5 @@ Aproveite o poder do "boot2root" para aprimorar seus conhecimentos em segurança
 Licença: MIT License
 
 Repositório do script: https://github.com/Jeanpseven/boot2root
+
+![quehacker](assets/que-hacker.gif)
