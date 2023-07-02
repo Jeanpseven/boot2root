@@ -1,5 +1,8 @@
 import requests
 import subprocess
+import motd
+
+motd.display_random_hacker_quote()
 
 def search_gtfo_bins(binary):
     url = f"https://gtfobins.github.io/gtfobins/{binary}/#sudo"
