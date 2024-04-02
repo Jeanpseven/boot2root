@@ -25,6 +25,13 @@ def search_gtfo_bins(program):
     except requests.exceptions.RequestException as e:
         print('Connection error:', e)
 
+def find_executables_with_root():
+    try:
+        output = subprocess.check_output(['find', '/', '-name', 'root', '-perm', '-4000', '2>/dev/null'], stderr=subprocess.STDOUT, universal_newlines=True)
+        return output
+    except subprocess.CalledProcessError as e:
+        return e.output
+
 def main():
     # Get binaries with root permissions
     sudo_permissions = get_sudo_permissions()
@@ -48,6 +55,11 @@ def main():
         result = search_gtfo_bins(program)
         if result:
             print(result)
+
+    # Find executables with root permissions
+    print('\nExecutables with root permissions:')
+    root_executables = find_executables_with_root()
+    print(root_executables)
 
 if __name__ == '__main__':
     main()
